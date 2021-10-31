@@ -1,13 +1,13 @@
 
 import { makeStyles } from '@material-ui/core/styles'
 
-export default makeStyles(() => ({
+export default makeStyles((theme) => ({
   root: {
     maxWidth: "100%",
   },
   media: {
     height: 0,
-    paddingTop: "56.25%", 
+    paddingTop: "56.25%",
   },
   cardActions: {
     display: "flex",
@@ -17,4 +17,12 @@ export default makeStyles(() => ({
     display: "flex",
     justifyContent: "space-between",
   },
+  // 
+ toolbar: theme.mixins.toolbar,
+  content: {
+    flexGrow: 1,
+    backgroundColor: theme.palette.background.default,
+    padding: theme.spacing(3),
+  },
+ 
 }));
