@@ -15,7 +15,7 @@ import logo from "../../assets/logo.png";
 const Navbar = () => {
   const classes = useStyles();
   return (
-    <div>
+    <>
       <AppBar position="fixed" className={classes.appBar}>
         <Toolbar>
           <Typography>
@@ -37,7 +37,7 @@ const Navbar = () => {
           </div>
         </Toolbar>
       </AppBar>
-    </div>
+    </>
   );
 };
 
