@@ -8,15 +8,15 @@ import useStyles from "./styles";
 //   { id: 2, name: "shoes", description: "running shoes ", price: "$10" },
 // ];
 
-const Products = ({products}) => {
+const Products = ({products, onAddToCart}) => {
   const classes = useStyles();
   return (
     <main>
-      <div className={classes.toolbar}/>
+      <div className={classes.toolbar} />
       <Grid container justifyContent="center" spacing={4}>
         {products.map((product) => (
           <Grid item key={product.id} xs={12} sm={6} md={4} lg={3}>
-            <Product product={product} />
+            <Product product={product} onAddToCart={onAddToCart}/>
           </Grid>
         ))}
       </Grid>
