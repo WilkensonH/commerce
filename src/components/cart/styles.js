@@ -26,11 +26,12 @@ export default makeStyles((theme) => ({
   },
   cardDetails: {
     display: "flex",
-    marginTop: "10%",
-    marginBottom: "100px",
+    
+    padding:'1%',
+    margin: "100px 0 ",
     width: "100%",
     justifyContent: "space-between",
-    border: "1px solid black",
+    border: "1px solid blue",
   },
   //CartItem
   media: {
