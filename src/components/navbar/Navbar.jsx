@@ -18,14 +18,8 @@ const Navbar = ({totalItems}) => {
     <>
       <AppBar position="fixed" className={classes.appBar}>
         <Toolbar>
-          <Typography>
-            <img
-              src={logo}
-              alt="EzCommerce"
-              height="35px"
-              className={classes.image}
-            />
-            EZCommerce
+          <Typography>       
+            <span className={classes.logo}>EZ</span>Commerce
           </Typography>
           <div className={classes.grow} />
           <div className={classes.button}>

@@ -6,6 +6,9 @@ export default makeStyles((theme) => ({
     marginTop: "15px",
     maxWidth: "100%",
   },
+  main: {
+    margin:"10px"
+  },
   media: {
     height: 0,
     paddingTop: "56.25%",

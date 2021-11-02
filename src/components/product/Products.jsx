@@ -11,7 +11,7 @@ import useStyles from "./styles";
 const Products = ({products, onAddToCart}) => {
   const classes = useStyles();
   return (
-    <main>
+    <main className={classes.main}>
       <div className={classes.toolbar} />
       <Grid container justifyContent="center" spacing={4}>
         {products.map((product) => (
