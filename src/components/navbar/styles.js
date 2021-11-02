@@ -11,6 +11,17 @@ export default makeStyles((theme) => ({
       marginLeft: drawerWidth,
     },
   },
+  logo: {
+    color: "red",
+    fontSize: "20px",
+  },
+  logoHover: {
+    "&:hover": {
+      color: "red",
+      transform:"scale(20px)"
+    },
+     
+  },
   title: {
     flexGrow: 1,
     alignItems: "center",

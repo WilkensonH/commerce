@@ -18,8 +18,9 @@ const Navbar = ({totalItems}) => {
     <>
       <AppBar position="fixed" className={classes.appBar}>
         <Toolbar>
-          <Typography>       
-            <span className={classes.logo}>EZ</span>Commerce
+          <Typography>
+            <span className={classes.logo}>EZ</span>
+            <span className={classes.logoHover}>Commerce</span>
           </Typography>
           <div className={classes.grow} />
           <div className={classes.button}>

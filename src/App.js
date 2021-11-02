@@ -33,7 +33,7 @@ const App = () => {
   return (
     <div>
       <Navbar />
-      {/* <Products products={products} onAddToCart={handleAddToCart} /> */}
+      <Products products={products} onAddToCart={handleAddToCart} />
       <Cart cart={cart} />
     </div>
   );
