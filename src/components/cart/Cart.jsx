@@ -9,7 +9,6 @@ const Cart = ({ cart, onUpdateCartQty, onRemoveFromCart, onEmptyCart }) => {
   const classes = useStyles();
 
   const handleEmptyCart = () => onEmptyCart();
-
   const renderEmptyCart = () => (
     <Typography variant="subtitle1">
       You have no items in your shopping cart,
@@ -42,7 +41,7 @@ const Cart = ({ cart, onUpdateCartQty, onRemoveFromCart, onEmptyCart }) => {
         <div>
           <Button
             className={classes.emptyButton}
-            size="large"
+            size="small"
             type="button"
             variant="contained"
             color="secondary"
@@ -54,7 +53,7 @@ const Cart = ({ cart, onUpdateCartQty, onRemoveFromCart, onEmptyCart }) => {
             className={classes.checkoutButton}
             // component={Link}
             to="/checkout"
-            size="large"
+            size="small"
             type="button"
             variant="contained"
             color="primary"
@@ -69,8 +68,8 @@ const Cart = ({ cart, onUpdateCartQty, onRemoveFromCart, onEmptyCart }) => {
   return (
     <Container>
       <div className={classes.toolbar} />
-      <Typography className={classes.title} variant="h3" gutterBottom>
-        Your Shopping Cart
+      <Typography className={classes.title} variant="h4" gutterBottom>
+        Your Cart 
       </Typography>
       {!cart.line_items.length ? renderEmptyCart() : renderCart()}
     </Container>

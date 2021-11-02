@@ -3,10 +3,13 @@ import { makeStyles } from "@material-ui/core/styles";
 export default makeStyles((theme) => ({
   toolbar: theme.mixins.toolbar,
   title: {
-    marginTop: "5%",
+    marginTop: "1%",
+    marginRight: "15px",
+    flexGrow: "1",
   },
   emptyButton: {
-    minWidth: "150px",
+    margin: "10px",
+    minWidth: "10px",
     [theme.breakpoints.down("xs")]: {
       marginBottom: "5px",
     },
@@ -15,7 +18,8 @@ export default makeStyles((theme) => ({
     },
   },
   checkoutButton: {
-    minWidth: "150px",
+    margin: "10px",
+    minWidth: "10px",
   },
   link: {
     textDecoration: "none",
@@ -23,23 +27,44 @@ export default makeStyles((theme) => ({
   cardDetails: {
     display: "flex",
     marginTop: "10%",
+    marginBottom: "100px",
     width: "100%",
     justifyContent: "space-between",
+    border: "1px solid black",
   },
   //CartItem
   media: {
     height: 260,
   },
   cardContent: {
-    display: 'flex',
-    justifyContent: 'space-between',
+    display: "flex",
+    justifyContent: "space-between",
   },
   cartActions: {
-    justifyContent: 'space-between',
+    justifyContent: "space-between",
+  },
+  total: {
+    float: "right",
+    flexGrow: "1",
+    display: "inline-flex",
+    color: "blue",
+    marginTop: "1%",
+    marginRight: "15px",    
+  },
+  subtotal: {
+    float: "right",
+    flexGrow: "1",
+    display: "inline-flex",
+    color: "#000",
+    marginTop: "1%",
+    marginRight: "15px",
+  },
+  containerTitle: {
+    display: "inline-flex",
   },
   buttons: {
-    display: 'flex',
-    alignItems: 'center',
+    display: "flex",
+    alignItems: "center",
   },
 }));
 
