@@ -14,13 +14,21 @@ export default makeStyles((theme) => ({
   logo: {
     color: "red",
     fontSize: "20px",
+    "&:hover": {
+      color: "white",
+      transform: "scale(20px)",
+    },
   },
+
   logoHover: {
+    color: "white",
     "&:hover": {
       color: "red",
-      transform:"scale(20px)"
+      transform: "scale(20px)",
+      logo: {
+        color: "white",
+      },
     },
-     
   },
   title: {
     flexGrow: 1,
