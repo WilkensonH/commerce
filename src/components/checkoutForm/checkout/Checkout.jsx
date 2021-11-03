@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { useHistory } from "react-router-dom";
 import { commerce } from "../../../lib/commerce";
 import {
   Paper,
@@ -17,9 +18,9 @@ import useStyles from "./styles";
 
 const steps = ["Shipping Address", "Payment details"];
 
-const Checkout = ({ cart }) => {
+const Checkout = ({ cart, order, onCaptureCheckout, error }) => {
   const classes = useStyles();
-
+  const history = useHistory();
   const [checkoutToken, setCheckoutToken] = useState(null);
   const [activeStep, setActiveStep] = useState(0);
   const [shippingData, setShippingData] = useState({});
@@ -33,7 +34,7 @@ const Checkout = ({ cart }) => {
 
         setCheckoutToken(token);
       } catch (error) {
-        console.log(error);
+        if (activeStep !== steps.length) history.push("/");
       }
     };
 
@@ -41,7 +42,7 @@ const Checkout = ({ cart }) => {
   }, [cart]);
 
   const nextStep = (prevStep) => setActiveStep(prevStep + 1);
-  const backStep = (currentStep) => setActiveStep(currentStep - 1);
+  const backStep = (prevStep) => setActiveStep(prevStep - 1);
 
   const next = (data) => {
     setShippingData(data);
@@ -56,7 +57,13 @@ const Checkout = ({ cart }) => {
     activeStep === 0 ? (
       <AddressForm checkoutToken={checkoutToken} next={next} />
     ) : (
-      <PaymentForm shippingData={shippingData} checkoutToken={checkoutToken}/>
+      <PaymentForm
+        shippingData={shippingData}
+        checkoutToken={checkoutToken}
+        backStep={backStep}
+        nextStep={nextStep}
+        onCaptureCheckout={onCaptureCheckout}
+      />
     );
 
   return (
