@@ -21,10 +21,11 @@ const PaymentForm = ({
     event.preventDefault();
     if (!stripe || !elements) return;
 
-    const cardElement = elements.getElement(CardElement);
+      const cardElement = elements.getElement(CardElement);
+      
     const { error, paymentMethod } = await stripe.createPaymentMethod({
       type: "card",
-      card: "cardElement",
+      card: cardElement,
     });
     if (error) {
       console.log(error);
@@ -44,7 +45,7 @@ const PaymentForm = ({
           postal_zip_code: shippingData.zip,
           country: shippingData.shippingCountry,
         },
-        fufillment: { shipping_method: shippingData.shippingOption },
+        fulfillment: { shipping_method: shippingData.shippingOption },
         payment: {
           gateway: "stripe",
           stripe: {
