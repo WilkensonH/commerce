@@ -49,9 +49,4 @@ export default makeStyles((theme) => ({
     justifyContent: "center",
     alignItems: "center",
   },
-  inputLabel: {
-    display: "flex",
-    justifyContent: "left",
-    alignItems: "left",
-  },
 }));

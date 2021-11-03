@@ -49,15 +49,24 @@ const AddressForm = ({ checkoutToken }) => {
         Shipping Address
       </Typography>
       <FormProvider {...methods}>
-        <form onSubmit={""}>
-          <Grid container spacing={4}>
+        <form
+          onSubmit={methods.handleSubmit((data) =>
+            test({
+              ...data,
+              shippingCountry,
+              shippingSubdivision,
+              shippingOption,
+            })
+          )}
+        >
+          <Grid container spacing={3}>
             <FormInput required name="firstName" label="First name" />
             <FormInput required name="lastName" label="Last name" />
             <FormInput required name="address1" label="Address" />
             <FormInput required name="email" label="Email" />
             <FormInput required name="city" label="City" />
             <FormInput required name="zip" label="Zip / Postal Code" />
-            <Grid xs={12} sm={6}>
+            <Grid xs={12} sm={6} inherent>
               <InputLabel>Shipping Country</InputLabel>
               <Select
                 value={shippingCountry}
@@ -72,7 +81,7 @@ const AddressForm = ({ checkoutToken }) => {
               </Select>
             </Grid>
             <Grid item xs={12} sm={6}>
-              <InputLabel>Shipping Subdivision</InputLabel>
+              <InputLabel align="left">Shipping Subdivision</InputLabel>
               <Select
                 value={shippingSubdivision}
                 fullWidth
@@ -88,14 +97,13 @@ const AddressForm = ({ checkoutToken }) => {
               </Select>
             </Grid>
             <Grid xs={12} sm={6}>
-              <InputLabel>Shipping Options</InputLabel>
+              <InputLabel align="left">Shipping Options</InputLabel>
               <Select value={""} fullWidth onChange={""}>
                 <MenuItem key={""} value={""}>
                   select me
                 </MenuItem>
               </Select>
             </Grid>{" "}
-            
           </Grid>
         </form>
       </FormProvider>
