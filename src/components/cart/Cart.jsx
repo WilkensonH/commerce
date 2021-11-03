@@ -5,10 +5,15 @@ import { Link } from "react-router-dom";
 import CartItem from "./CartItem";
 import useStyles from "./styles";
 
-const Cart = ({ cart, onUpdateCartQty, onRemoveFromCart, onEmptyCart }) => {
+const Cart = ({
+  cart,
+  handleUpdateCartQty,
+  handleRemoveFromCart,
+  handleEmptyCart,
+}) => {
   const classes = useStyles();
 
-  const handleEmptyCart = () => onEmptyCart();
+  // const handleEmptyCart = () => onEmptyCart();
   const renderEmptyCart = () => (
     <Typography variant="subtitle1">
       You have no items in your shopping cart,
@@ -28,8 +33,8 @@ const Cart = ({ cart, onUpdateCartQty, onRemoveFromCart, onEmptyCart }) => {
           <Grid item xs={12} sm={4} key={lineItem.id}>
             <CartItem
               item={lineItem}
-              onUpdateCartQty={onUpdateCartQty}
-              onRemoveFromCart={onRemoveFromCart}
+              onUpdateCartQty={handleUpdateCartQty}
+              onRemoveFromCart={handleRemoveFromCart}
             />
           </Grid>
         ))}
@@ -69,7 +74,7 @@ const Cart = ({ cart, onUpdateCartQty, onRemoveFromCart, onEmptyCart }) => {
     <Container>
       <div className={classes.toolbar} />
       <Typography className={classes.title} variant="h4" gutterBottom>
-        Your Cart 
+        Your Cart
       </Typography>
       {!cart.line_items.length ? renderEmptyCart() : renderCart()}
     </Container>
