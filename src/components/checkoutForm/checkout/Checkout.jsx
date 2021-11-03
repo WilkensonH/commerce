@@ -21,8 +21,8 @@ const Checkout = ({ cart }) => {
   const classes = useStyles();
 
   const [checkoutToken, setCheckoutToken] = useState(null);
-
   const [activeStep, setActiveStep] = useState(0);
+  const [shippingData, setShippingData] = useState({});
 
   useEffect(() => {
     const generateToken = async () => {
@@ -40,15 +40,23 @@ const Checkout = ({ cart }) => {
     generateToken();
   }, [cart]);
 
+  const nextStep = (prevStep) => setActiveStep(prevStep + 1);
+  const backStep = (currentStep) => setActiveStep(currentStep - 1);
+
+  const next = (data) => {
+    setShippingData(data);
+    nextStep();
+  };
+
   const Confirmation = () => {
     <div>"Confirmation"</div>;
   };
 
   const Form = () =>
     activeStep === 0 ? (
-      <AddressForm checkoutToken={checkoutToken} />
+      <AddressForm checkoutToken={checkoutToken} next={next} />
     ) : (
-      <PaymentForm />
+      <PaymentForm shippingData={shippingData} />
     );
 
   return (
@@ -56,7 +64,9 @@ const Checkout = ({ cart }) => {
       <div className={classes.toolbar} />
       <main className={classes.layout}>
         <Paper className={classes.paper}>
-          <Typography variant="h4" align="center">Checkout</Typography>
+          <Typography variant="h4" align="center">
+            Checkout
+          </Typography>
           <Stepper activeStep={activeStep} className={classes.stepper}>
             {steps.map((step) => (
               <Step key={step}>
@@ -69,7 +79,7 @@ const Checkout = ({ cart }) => {
           ) : (
             checkoutToken && <Form />
           )}
-        </Paper>        
+        </Paper>
       </main>
     </>
   );
