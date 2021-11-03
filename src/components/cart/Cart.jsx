@@ -16,7 +16,7 @@ const Cart = ({
   // const handleEmptyCart = () => onEmptyCart();
   const renderEmptyCart = () => (
     <Typography variant="subtitle1">
-      You have no items in your shopping cart,
+       Your shopping cart is empty,{'  '}
       <Link className={classes.link} to="/">
         start adding some
       </Link>
