@@ -12,8 +12,7 @@ const Cart = ({
   handleEmptyCart,
 }) => {
   const classes = useStyles();
-
-  // const handleEmptyCart = () => onEmptyCart();
+ 
   const renderEmptyCart = () => (
     <Typography variant="subtitle1">
        Your shopping cart is empty,{'  '}

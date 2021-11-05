@@ -100,18 +100,18 @@ const AddressForm = ({ checkoutToken, next }) => {
               ...data,
               shippingCountry,
               shippingSubdivision,
-              shippingOption
+              shippingOption,
             })
           )}
         >
           <Grid container spacing={2}>
-            <FormInput name="firstName" label="First name" />
+            <FormInput name="firstName" label="First name" required />
             <FormInput name="lastName" label="Last name" />
             <FormInput name="address1" label="Address" />
             <FormInput name="email" label="Email" />
             <FormInput name="city" label="City" />
             <FormInput name="zip" label="ZIP / Postal Code" />
-
+             
             <Grid item xs={12} sm={6}>
               <InputLabel>Shipping Country</InputLabel>
               <Select
@@ -126,7 +126,6 @@ const AddressForm = ({ checkoutToken, next }) => {
                 ))}
               </Select>
             </Grid>
-
             <Grid item xs={12} sm={6}>
               <InputLabel>Shipping Subdivision</InputLabel>
               <Select
@@ -141,7 +140,6 @@ const AddressForm = ({ checkoutToken, next }) => {
                 ))}
               </Select>
             </Grid>
-
             <Grid item xs={12} sm={6}>
               <InputLabel>Shipping Options</InputLabel>
               <Select
@@ -159,15 +157,16 @@ const AddressForm = ({ checkoutToken, next }) => {
           </Grid>
           <br />
           <div style={{ display: "flex", justifyContent: "space-between" }}>
-            <Button
-              component={Link}
-              to="/cart"
-              size="small"
-              variant="outlined"
-            >
+            <Button component={Link} to="/cart" size="small" variant="outlined">
               Back to Cart
             </Button>
-            <Button type='submit' to='/payment' size="small" variant="contained" color="primary">
+            <Button
+              type="submit"
+              to="/payment"
+              size="small"
+              variant="contained"
+              color="primary"
+            >
               Next
             </Button>
           </div>

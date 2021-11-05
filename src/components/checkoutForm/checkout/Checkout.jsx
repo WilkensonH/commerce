@@ -50,39 +50,32 @@ const Checkout = ({ cart, order, onCaptureCheckout, error }) => {
     setShippingData(data);
     nextStep();
   };
-
-  let Confirmation = () =>
-    order.customer ? (
-      <>
-        <div>
-          <Typography variant="h5">
-            Thank you for your purchase, {order.customer.firstname}{" "}
-            {order.customer.lastname}
-          </Typography>
-          <Divider className={classes.divider} />
-          <Typography variant="subtitle2">
-            order ref: {order.customer_reference}
-          </Typography>
-        </div>
-        <br />
-        <Button component={Link} to="/" type="button" variant="outlined">
-          Back to home
-        </Button>
-      </>
-    ) : (
-      <div className={classes.spinner}>
-        <CircularProgress />
-      </div>
-    );
-  if (error) {
+  
+  let Confirmation = () => (order.customer ? (
     <>
-      <Typography variant="h5">Error: {error}</Typography>
+      <div>
+        <Typography variant="h5">Thank you for your purchase, {order.customer.firstname} {order.customer.lastname}!</Typography>
+        <Divider className={classes.divider} />
+        <Typography variant="subtitle2">Order ref: {order.customer_reference}</Typography>
+      </div>
       <br />
-      <Button component={Link} to="/" type="button" variant="outlined">
-        Back to home
-      </Button>
-    </>;
-  }
+      <Button component={Link} variant="outlined" type="button" to="/">Back to home</Button>
+    </>
+  ) : (
+    <div className={classes.spinner}>
+      <CircularProgress />
+    </div>
+  ));
+
+  if (error) {
+    Confirmation = () => (
+      <>
+        <Typography variant="h5" color="secondary">Error: {error}</Typography>
+        <br />
+        <Button component={Link} variant="outlined" type="button" to="/">Back to home</Button>
+      </>
+    );
+ }
 
   const Form = () =>
     activeStep === 0 ? (

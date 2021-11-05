@@ -31,7 +31,7 @@ const CartItem = ({ item, onUpdateCartQty, onRemoveFromCart }) => {
         </Typography>
       </CardContent>
       <CardActions className={classes.cardActions}>
-        <div className={classes.buttons}>
+        <div className={classes.buttons} xs={12} sm={6}>
           <Button
             type="button"
             size="small"
@@ -49,6 +49,8 @@ const CartItem = ({ item, onUpdateCartQty, onRemoveFromCart }) => {
           </Button>
         </div>
         <Button
+          xs={12}
+          sm={6}
           size="small"
           variant="contained"
           type="button"
