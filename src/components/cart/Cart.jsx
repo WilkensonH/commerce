@@ -52,7 +52,7 @@ const Cart = ({
             color="secondary"
             onClick={handleEmptyCart}
           >
-            Empty cart
+            EmptyCart
           </Button>
           <Button
             className={classes.checkoutButton}

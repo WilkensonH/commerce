@@ -25,13 +25,12 @@ export default makeStyles((theme) => ({
     textDecoration: "none",
   },
   cardDetails: {
-    display: "flex",
-    
+    display: "flex",    
     padding:'1%',
     margin: "100px 0 ",
     width: "100%",
     justifyContent: "space-between",
-    border: "1px solid blue",
+     
   },
   //CartItem
   media: {
@@ -58,7 +57,7 @@ export default makeStyles((theme) => ({
     display: "inline-flex",
     color: "#000",
     marginTop: "1%",
-    marginRight: "15px",
+    marginRight: "10px",
   },
   containerTitle: {
     display: "inline-flex",

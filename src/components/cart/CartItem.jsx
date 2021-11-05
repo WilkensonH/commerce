@@ -49,6 +49,7 @@ const CartItem = ({ item, onUpdateCartQty, onRemoveFromCart }) => {
           </Button>
         </div>
         <Button
+          size="small"
           variant="contained"
           type="button"
           color="secondary"
