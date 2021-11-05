@@ -17,8 +17,8 @@ const PaymentForm = ({
 }) => {
   const stripePromise = loadStripe(process.env.REACT_APP_STRIPE_PUBLIC_KEY);
 
-  const handleSubmit = async (event, elements, stripe) => {
-    event.preventDefault();
+  const handleSubmit = async (e, elements, stripe) => {
+    e.preventDefault();
     if (!stripe || !elements) return;
 
       const cardElement = elements.getElement(CardElement);

@@ -6,17 +6,17 @@ const FormInput = ({ name, label}) => {
   const { control } = useFormContext();
   
   return (
-    <Grid item xs={12} sm={6}> 
-      <Controller
+    <Grid item xs={12} sm={6}>
+      <Controller             
         render={() => (
           <TextField
-            required 
+            name={name}
             label={label}
             control={control}
             fullWidth
-            name={name}             
+            required
           />
-        )}        
+        )}
       />
     </Grid>
   );

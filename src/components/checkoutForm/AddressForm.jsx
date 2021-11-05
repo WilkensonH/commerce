@@ -12,10 +12,10 @@ import {
 import FormInput from "./CustomTextField";
 import { useForm, FormProvider } from "react-hook-form";
 import { commerce } from "../../lib/commerce";
-// import useStyles from '../checkoutForm/checkout/styles'
+
 
 const AddressForm = ({ checkoutToken, next }) => {
-  // const classes = useStyles()
+ 
   const [shippingCountries, setShippingCountries] = useState([]);
   const [shippingCountry, setShippingCountry] = useState("");
   const [shippingSubdivisions, setShippingSubdivisions] = useState([]);
@@ -39,7 +39,7 @@ const AddressForm = ({ checkoutToken, next }) => {
 
   const options = shippingOptions.map((shippingOption) => ({
     id: shippingOption.id,
-    label: `${shippingOption.description} __ ${shippingOption.price.formatted_with_symbol}`,
+    label: `${shippingOption.description} _ ${shippingOption.price.formatted_with_symbol}`,
   }));
 
   const fetchShippingCountries = async (checkoutTokenId) => {
@@ -100,7 +100,7 @@ const AddressForm = ({ checkoutToken, next }) => {
               ...data,
               shippingCountry,
               shippingSubdivision,
-              shippingOption,
+              shippingOption
             })
           )}
         >
@@ -110,7 +110,8 @@ const AddressForm = ({ checkoutToken, next }) => {
             <FormInput name="address1" label="Address" />
             <FormInput name="email" label="Email" />
             <FormInput name="city" label="City" />
-            <FormInput name="zip" label="Zip / Postal Code" />
+            <FormInput name="zip" label="ZIP / Postal Code" />
+
             <Grid item xs={12} sm={6}>
               <InputLabel>Shipping Country</InputLabel>
               <Select
@@ -125,6 +126,7 @@ const AddressForm = ({ checkoutToken, next }) => {
                 ))}
               </Select>
             </Grid>
+
             <Grid item xs={12} sm={6}>
               <InputLabel>Shipping Subdivision</InputLabel>
               <Select
@@ -139,6 +141,7 @@ const AddressForm = ({ checkoutToken, next }) => {
                 ))}
               </Select>
             </Grid>
+
             <Grid item xs={12} sm={6}>
               <InputLabel>Shipping Options</InputLabel>
               <Select
