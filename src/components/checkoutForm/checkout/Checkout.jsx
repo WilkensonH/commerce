@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useHistory } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { commerce } from "../../../lib/commerce";
 import {
   Paper,
@@ -7,9 +8,10 @@ import {
   Step,
   StepLabel,
   Typography,
-  circularProgress,
   Divider,
   Button,
+  CircularProgress,
+  CssBaseline,
 } from "@material-ui/core";
 
 import AddressForm from "../AddressForm";
@@ -45,15 +47,42 @@ const Checkout = ({ cart, order, onCaptureCheckout, error }) => {
   const nextStep = () => setActiveStep((prevActiveStep) => prevActiveStep + 1);
 
   const next = (data) => {
-    setShippingData(data);    
+    setShippingData(data);
     nextStep();
   };
 
-  const Confirmation = () => {
-    return <div>
-      Confirmation
-    </div>;
-  };
+  let Confirmation = () =>
+    order.customer ? (
+      <>
+        <div>
+          <Typography variant="h5">
+            Thank you for your purchase, {order.customer.firstname}{" "}
+            {order.customer.lastname}
+          </Typography>
+          <Divider className={classes.divider} />
+          <Typography variant="subtitle2">
+            order ref: {order.customer_reference}
+          </Typography>
+        </div>
+        <br />
+        <Button component={Link} to="/" type="button" variant="outlined">
+          Back to home
+        </Button>
+      </>
+    ) : (
+      <div className={classes.spinner}>
+        <CircularProgress />
+      </div>
+    );
+  if (error) {
+    <>
+      <Typography variant="h5">Error: {error}</Typography>
+      <br />
+      <Button component={Link} to="/" type="button" variant="outlined">
+        Back to home
+      </Button>
+    </>;
+  }
 
   const Form = () =>
     activeStep === 0 ? (
@@ -70,6 +99,7 @@ const Checkout = ({ cart, order, onCaptureCheckout, error }) => {
 
   return (
     <>
+      <CssBaseline/>
       <div className={classes.toolbar} />
       <main className={classes.layout}>
         <Paper className={classes.paper}>
@@ -83,7 +113,7 @@ const Checkout = ({ cart, order, onCaptureCheckout, error }) => {
               </Step>
             ))}
           </Stepper>
-          {activeStep === steps.length ? (           
+          {activeStep === steps.length ? (
             <Confirmation />
           ) : (
             checkoutToken && <Form />
