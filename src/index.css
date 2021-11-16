@@ -26,9 +26,9 @@ body {
 body {
   background: radial-gradient(
     ellipse at center,
-    #ffffff 0%,
-    #ffffff 35%,
-    #fff 100%
+    #eee 0%,
+    #eee 35%,
+    #eee 100%
   );
   overflow: hidden;
 }
