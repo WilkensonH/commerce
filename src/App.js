@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { commerce } from "./lib/commerce";
-import { Products, Navbar, Cart, Checkout, Home} from "./components";
+import { Products, Navbar, Cart, Checkout, Home, Footer} from "./components";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 const App = () => {
@@ -90,6 +90,7 @@ const App = () => {
             />
           </Route>
         </Switch>
+        <Footer/>
       </div>
     </Router>
   );
