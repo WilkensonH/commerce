@@ -11,7 +11,6 @@ import {
 import { Link, useLocation } from "react-router-dom";
 import { ShoppingCart } from "@material-ui/icons";
 import useStyles from "./styles";
-import logo from "../../assets/logo.png";
 
 const Navbar = ({ totalItems }) => {
   const classes = useStyles();
@@ -20,12 +19,24 @@ const Navbar = ({ totalItems }) => {
   return (
     <>
       <AppBar position="fixed" className={classes.appBar}>
-        <Toolbar>
+        <Toolbar style={{ backgroundColor: "#015871" }}>
           <Typography component={Link} to="/">
             <span className={classes.logo}>EZ</span>
             <span className={classes.logoHover}>Commerce</span>
           </Typography>
           <div className={classes.grow} />
+          <div>
+            <Typography
+              className={classes.navLinks}
+              component={Link}
+              to="/home"
+            >
+              <span className={classes.navLinks}>Home</span>
+            </Typography>
+            <Typography component={Link} to="/">
+              <span className={classes.navLinks}>Shopping</span>
+            </Typography>
+          </div>
           {location.pathname === "/" && (
             <div className={classes.button}>
               <IconButton

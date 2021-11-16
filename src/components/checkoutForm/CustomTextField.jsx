@@ -18,8 +18,7 @@ const FormInput = ({ name, label, required }) => {
           />
          
         )}   
-       />
-      
+       />      
     </Grid>
   );
 };

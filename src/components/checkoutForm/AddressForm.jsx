@@ -13,7 +13,6 @@ import FormInput from "./CustomTextField";
 import { useForm, FormProvider } from "react-hook-form";
 import { commerce } from "../../lib/commerce";
 
-
 const AddressForm = ({ checkoutToken, next }) => {
  
   const [shippingCountries, setShippingCountries] = useState([]);

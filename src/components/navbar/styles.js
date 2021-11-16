@@ -48,6 +48,16 @@ export default makeStyles((theme) => ({
   grow: {
     flexGrow: 1,
   },
+  navLinks: {
+    marginRight: "10px",
+    color:'white',
+    "&:hover": {
+      color: "red",      
+    },
+    "&:active": {
+      color: "blue",      
+    },
+  },
   search: {
     position: "relative",
     borderRadius: theme.shape.borderRadius,
