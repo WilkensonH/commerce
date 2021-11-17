@@ -3,11 +3,11 @@ import { makeStyles } from "@material-ui/core/styles";
 export default makeStyles((theme) => ({
   root: {
     color: "#fff",
-    marginTop: "100px",
+    marginTop: "-25px",
     maxWidth: "100%",
-    zIndex: "1",
+    zIndex: "7",
     justifyContent: "center",
     alignItems: "center",
     display: "flex",
-  },
+  }, 
 }));

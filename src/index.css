@@ -82,3 +82,12 @@ body {
     transform: translate3d(0, 5px, 0);
   }
 }
+.footer{
+position: relative;
+min-height:100vh;
+}
+.foot{
+  position:absolute;
+  width: 100%;
+  bottom: 700px;
+}

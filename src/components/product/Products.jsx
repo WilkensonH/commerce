@@ -15,8 +15,7 @@ const Products = ({products, onAddToCart}) => {
             <Product product={product} onAddToCart={onAddToCart} />
           </Grid>
         ))}
-      </Grid>
-      <Footer />
+      </Grid>   
     </main>
   );
 };

@@ -12,7 +12,7 @@ import { AddShoppingCart } from "@material-ui/icons";
 import useStyles from "./styles";
 
 const Product = ({ product, onAddToCart }) => {
-  console.log(product)
+  console.log(product);
   const classes = useStyles();
   return (
     <Card className={classes.root}>
@@ -44,10 +44,6 @@ const Product = ({ product, onAddToCart }) => {
           <AddShoppingCart />
         </IconButton>
       </CardActions>
-      <div class="ocean">
-        <div class="wave"></div>
-        <div class="wave"></div>
-      </div>    
     </Card>
   );
 };

@@ -9,14 +9,9 @@ const Home = () => {
       <div className={classes.toolbar} />
       home
       <div className={classes.root}>
-        {/*  */}
-
-        <div class="ocean">
-          <div class="wave"></div>
-          <div class="wave"></div>
-        </div>
+        {/*  */}      
       </div>
-      <Footer />
+      {/* <Footer /> */}
     </main>
   );
 };
