@@ -8,6 +8,7 @@ export default makeStyles((theme) => ({
   },
   main: {
     margin: "10px",
+    minHeight: "100vh"
   },
   toolbar: theme.mixins.toolbar,
   content: {
