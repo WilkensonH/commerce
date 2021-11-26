@@ -2,7 +2,7 @@ import React from "react";
 import { Grid } from "@material-ui/core";
 import Product from "./Product";
 import useStyles from "./styles";
-import Footer from "../footer/Footer"; 
+ 
 
 const Products = ({products, onAddToCart}) => {
   const classes = useStyles();
@@ -15,8 +15,7 @@ const Products = ({products, onAddToCart}) => {
             <Product product={product} onAddToCart={onAddToCart} />
           </Grid>
         ))}
-      </Grid>
-      <Footer />
+      </Grid>       
     </main>
   );
 };

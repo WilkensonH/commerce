@@ -8,12 +8,22 @@ export default makeStyles((theme) => ({
   },
   main: {
     margin: "10px",
-    minHeight: "100vh"
+    minHeight: "100vh",
   },
   toolbar: theme.mixins.toolbar,
   content: {
     flexGrow: 1,
     backgroundColor: theme.palette.background.default,
     padding: theme.spacing(3),
+  },
+  mainBg: {
+    display: "flex",
+    justifyContent: "space-between",
+    alignItems: "center",
+    margin: " 15px 10px",
+    padding: "0 1px",
+  },
+  mainText: {
+    padding: "0 15px 20px",
   },
 }));
