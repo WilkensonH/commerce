@@ -31,7 +31,7 @@ const Navbar = ({ totalItems }) => {
               component={Link}
               to="/home"
             >
-              <span className={classes.navLinks}>Home</span>
+              <span className={classes.navLinks}>About us</span>
             </Typography>
             <Typography component={Link} to="/">
               <span className={classes.navLinks}>Shopping</span>
