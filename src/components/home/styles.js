@@ -7,7 +7,7 @@ export default makeStyles((theme) => ({
     zIndex: "1",
   },
   main: {
-    margin: "10px",
+    margin: "15px",
     minHeight: "100vh",
   },
   toolbar: theme.mixins.toolbar,
@@ -21,7 +21,9 @@ export default makeStyles((theme) => ({
     justifyContent: "space-between",
     alignItems: "center",
     margin: " 15px 10px",
-    padding: "0 1px",
+    "@media (max-width:780px)": {     
+      display: "inline-block",
+    },
   },
   mainText: {
     padding: "0 15px 20px",
