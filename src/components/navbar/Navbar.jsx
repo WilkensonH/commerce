@@ -20,7 +20,7 @@ const Navbar = ({ totalItems }) => {
     <>
       <AppBar position="fixed" className={classes.appBar}>
         <Toolbar style={{ backgroundColor: "#015871", borderBottom:'1px solid' }}>
-          <Typography component={Link} to="/home">
+          <Typography component={Link} to="/about">
             <span className={classes.logo}>EZ</span>
             <span className={classes.logoHover}>Commerce</span>
           </Typography>
@@ -29,7 +29,7 @@ const Navbar = ({ totalItems }) => {
             <Typography
               className={classes.navLinks}
               component={Link}
-              to="/home"
+              to="/about"
             >
               <span className={classes.navLinks}>About us</span>
             </Typography>

@@ -1,17 +1,7 @@
 import React from "react";
-import {
-  Card,
-  CardMedia,
-  CardContent,
-  CardActions,
-  Typography,
-  IconButton,
-  Grid,
-} from "@material-ui/core";
-
 import useStyles from "./styles";
 
-const Home = ({ product, onAddToCart }) => {
+const About = () => {
   const classes = useStyles();
   return (
     <main>
@@ -91,4 +81,4 @@ const Home = ({ product, onAddToCart }) => {
   );
 };
 //#015871
-export default Home;
+export default About;
