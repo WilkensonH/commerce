@@ -6,20 +6,21 @@ import {
   ElementsConsumer,
 } from "@stripe/react-stripe-js";
 import { loadStripe } from "@stripe/stripe-js";
+
 import Review from "./Review";
+
+const stripePromise = loadStripe(process.env.REACT_APP_STRIPE_PUBLIC_KEY);
 
 const PaymentForm = ({
   checkoutToken,
-  shippingData,
-  backStep,
-  onCaptureCheckout,
   nextStep,
-  timeout,
+  backStep,
+  shippingData,
+  onCaptureCheckout,
 }) => {
-  const stripePromise = loadStripe(process.env.REACT_APP_STRIPE_PUBLIC_KEY);
+  const handleSubmit = async (event, elements, stripe) => {
+    event.preventDefault();
 
-  const handleSubmit = async (e, elements, stripe) => {
-    e.preventDefault();
     if (!stripe || !elements) return;
 
     const cardElement = elements.getElement(CardElement);
@@ -28,18 +29,19 @@ const PaymentForm = ({
       type: "card",
       card: cardElement,
     });
+
     if (error) {
-      console.log(error);
+      console.log("[error]", error);
     } else {
       const orderData = {
         line_items: checkoutToken.live.line_items,
         customer: {
-          firstname: shippingData.firstName,
-          lastname: shippingData.lastName,
+          firstName: shippingData.firstName,
+          lastName: shippingData.lastName,
           email: shippingData.email,
         },
         shipping: {
-          name: "primary",
+          name: "International",
           street: shippingData.address1,
           town_city: shippingData.city,
           county_state: shippingData.shippingSubdivision,
@@ -54,8 +56,9 @@ const PaymentForm = ({
           },
         },
       };
+
       onCaptureCheckout(checkoutToken.id, orderData);
-      timeout();
+
       nextStep();
     }
   };
@@ -74,11 +77,10 @@ const PaymentForm = ({
               <CardElement />
               <br /> <br />
               <div style={{ display: "flex", justifyContent: "space-between" }}>
-                <Button size="small" variant="outlined" onClick={backStep}>
+                <Button variant="outlined" onClick={backStep}>
                   Back
                 </Button>
                 <Button
-                  size="small"
                   type="submit"
                   variant="contained"
                   disabled={!stripe}
