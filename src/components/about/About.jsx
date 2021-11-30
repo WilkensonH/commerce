@@ -7,7 +7,7 @@ const About = () => {
     <main>
       <div className={classes.toolbar} />
       <div className={classes.mainBg}>
-        <div>
+        <div className={classes.img}>
           <img src="asset/fitness.jpeg" alt="tread mill" />
         </div>
         <div className={classes.mainText}>

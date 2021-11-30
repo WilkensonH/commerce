@@ -23,7 +23,11 @@ export default makeStyles((theme) => ({
     margin: " 15px 10px",
     "@media (max-width:780px)": {     
       display: "inline-block",
+      width: "80%",      
     },
+  },
+  img: {     
+        width:'10px'      
   },
   mainText: {
     padding: "0 15px 20px",

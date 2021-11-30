@@ -9,6 +9,9 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  height: 100%;
+  background: radial-gradient(ellipse at center, #eee 0%, #eee 35%, #eee 100%);
+  overflow: auto;
 }
 a {
   text-decoration: none;
@@ -18,14 +21,8 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
-
-html,
-body {
-  height: 100%;
+@media (max-width: 780px) {
+  img {
+    width: 300px;
+  }
 }
-body {
-  background: radial-gradient(ellipse at center, #eee 0%, #eee 35%, #eee 100%);
-  overflow: hidden;
-}
-
- 
