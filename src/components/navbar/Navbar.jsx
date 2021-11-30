@@ -22,7 +22,7 @@ const Navbar = ({ totalItems }) => {
         <Toolbar style={{ backgroundColor: "#015871", borderBottom:'1px solid' }}>
           <Typography component={Link} to="/about">
             <span className={classes.logo}>EZ</span>
-            <span className={classes.logoHover}>Commerce</span>
+            <span className='commerce'>Commerce</span>
           </Typography>
           <div className={classes.grow} />
           <div>
@@ -31,7 +31,7 @@ const Navbar = ({ totalItems }) => {
               component={Link}
               to="/about"
             >
-              <span className={classes.navLinks}>About us</span>
+              <span className={classes.navLinks}>About&nbsp;us</span>
             </Typography>
             <Typography component={Link} to="/">
               <span className={classes.navLinks}>Shopping</span>

@@ -16,7 +16,12 @@ body {
 a {
   text-decoration: none;
 }
-
+.commerce {
+  color: #ff0000;
+}
+.commerce:hover {
+  color: #ffffff;
+}
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
@@ -24,5 +29,11 @@ code {
 @media (max-width: 780px) {
   img {
     width: 300px;
+    margin: 10px;
+  }
+}
+@media (max-width: 300px) {
+  .commerce {
+    display: none;
   }
 }

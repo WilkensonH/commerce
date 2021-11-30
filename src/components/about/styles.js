@@ -21,15 +21,13 @@ export default makeStyles((theme) => ({
     justifyContent: "space-between",
     alignItems: "center",
     margin: " 15px 10px",
-    "@media (max-width:780px)": {     
+    "@media (max-width:780px)": {
       display: "inline-block",
-      width: "80%",      
+      width: "100%",
+      margin: "auto",
     },
   },
-  img: {     
-        width:'10px'      
-  },
   mainText: {
-    padding: "0 15px 20px",
+    padding: "0 15px 20px",    
   },
 }));
