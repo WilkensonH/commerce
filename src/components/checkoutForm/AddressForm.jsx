@@ -1,10 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import SelectInput from './SelectInput'
+import SelectInput from "./SelectInput";
 import {
-  InputLabel,
-  Select,
-  MenuItem,
   Grid,
   Typography,
   Button,
@@ -26,23 +23,6 @@ const AddressForm = ({ checkoutToken, next }) => {
 
   const methods = useForm();
 
-  const countries = Object.entries(shippingCountries).map(([code, name]) => ({
-   
-    id: code,
-    label: name, 
-  }));
- 
-  const subdivisions = Object.entries(shippingSubdivisions).map(
-    ([code, name]) => ({
-      id: code,
-      label: name,
-    })
-  );
-  const options = shippingOptions.map((shippingOption) => ({
-    id: shippingOption.id,
-    label: `${shippingOption.description} _ ${shippingOption.price.formatted_with_symbol}`,
-  }));
-
   const fetchShippingCountries = async (checkoutTokenId) => {
     const { countries } = await commerce.services.localeListShippingCountries(
       checkoutTokenId
@@ -50,8 +30,8 @@ const AddressForm = ({ checkoutToken, next }) => {
 
     setShippingCountries(countries);
     setShippingCountry(Object.keys(countries)[0]);
+    console.log(countries)
   };
-
   const fetchSubdivisions = async (countryCode) => {
     const { subdivisions } = await commerce.services.localeListSubdivisions(
       countryCode
@@ -88,7 +68,12 @@ const AddressForm = ({ checkoutToken, next }) => {
         shippingCountry,
         shippingSubdivision
       );
-  }, [shippingSubdivision, setShippingSubdivision, checkoutToken.id,shippingCountry]);
+  }, [
+    shippingSubdivision,
+    setShippingSubdivision,
+    checkoutToken.id,
+    shippingCountry,
+  ]);
   return (
     <>
       <Typography variant="h6" gutterBottom>
@@ -120,8 +105,8 @@ const AddressForm = ({ checkoutToken, next }) => {
                 label="Use this address for payment details"
               />
             </Grid>
-            
-            <SelectInput   
+
+            <SelectInput
               label="Shipping Country"
               value={shippingCountry}
               onChange={(e) => setShippingCountry(e.target.value)}
