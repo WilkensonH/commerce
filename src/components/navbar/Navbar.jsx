@@ -19,10 +19,15 @@ const Navbar = ({ totalItems }) => {
   return (
     <>
       <AppBar position="fixed" className={classes.appBar}>
-        <Toolbar style={{ backgroundColor: "#015871", borderBottom:'1px solid' }}>
+        <Toolbar
+          style={{ backgroundColor: "#015871", borderBottom: "1px solid" }}
+        >
           <Typography component={Link} to="/about">
-            <span className={classes.logo}>EZ</span>
-            <span className='commerce'>Commerce</span>
+            <div className={classes.logoContainer}>
+              <div className={classes.logoText}>
+                <span className={classes.logo}>EZCommerce</span>
+              </div>
+            </div>
           </Typography>
           <div className={classes.grow} />
           <div>

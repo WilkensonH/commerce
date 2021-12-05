@@ -13,13 +13,26 @@ export default makeStyles((theme) => ({
   },
   logo: {
     color: "red",
-    fontSize: "20px",
+    fontSize: "15px",
     "&:hover": {
-      color: "white",
-      transform: "scale(20px)",
+      color: "red",
+      opacity: ".8",
     },
   },
-
+  logoContainer: {
+    border: "1px solid #fff",
+    borderRadius: "45%",
+    width: "110px",
+    height: "30px",
+    position: "relative",
+    background: "white",
+  },
+  logoText: {
+    borderRadius: "50%",
+    position: "absolute",
+    left: "8px",
+    top: "2px",
+  },
   logoHover: {
     color: "white",
     "&:hover": {
@@ -50,12 +63,12 @@ export default makeStyles((theme) => ({
   },
   navLinks: {
     marginRight: "10px",
-    color:'white',
+    color: "white",
     "&:hover": {
-      color: "red",      
+      color: "red",
     },
     "&:active": {
-      color: "blue",      
+      color: "blue",
     },
   },
   search: {
