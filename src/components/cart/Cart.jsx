@@ -12,10 +12,10 @@ const Cart = ({
   handleEmptyCart,
 }) => {
   const classes = useStyles();
- 
+
   const renderEmptyCart = () => (
     <Typography variant="subtitle1">
-       Your shopping cart is empty,{'  '}
+      Your shopping cart is empty,{"  "}
       <Link className={classes.link} to="/">
         start adding some
       </Link>

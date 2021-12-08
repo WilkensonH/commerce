@@ -22,8 +22,7 @@ export default makeStyles((theme) => ({
   cardContent: {
     display: "flex",
     justifyContent: "space-between",    
-  },
-  //
+  }, 
   toolbar: theme.mixins.toolbar,
   content: {
     flexGrow: 1,
