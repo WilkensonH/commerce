@@ -30,6 +30,7 @@ export default makeStyles((theme) => ({
     margin: "100px 0 ",
     width: "100%",
     justifyContent: "space-between",
+    wrap:'wrap'
      
   },
   //CartItem

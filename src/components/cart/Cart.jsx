@@ -27,7 +27,7 @@ const Cart = ({
 
   const renderCart = () => (
     <>
-      <Grid container spacing={3}>
+      <Grid container spacing={2}>
         {cart.line_items.map((lineItem) => (
           <Grid item xs={12} sm={4} key={lineItem.id}>
             <CartItem
@@ -40,19 +40,10 @@ const Cart = ({
       </Grid>
       <div className={classes.cardDetails}>
         <Typography variant="h4">
-          Subtotal: {cart.subtotal.formatted_with_symbol}
+          Subtotal:&nbsp;{cart.subtotal.formatted_with_symbol}
         </Typography>
         <div>
-          <Button
-            className={classes.emptyButton}
-            size="small"
-            type="button"
-            variant="contained"
-            color="secondary"
-            onClick={handleEmptyCart}
-          >
-            EmptyCart
-          </Button>
+          &nbsp;
           <Button
             className={classes.checkoutButton}
             component={Link}
@@ -64,11 +55,20 @@ const Cart = ({
           >
             Checkout
           </Button>
+          <Button
+            className={classes.emptyButton}
+            size="small"
+            type="button"
+            variant="contained"
+            color="secondary"
+            onClick={handleEmptyCart}
+          >
+            EmptyCart
+          </Button>
         </div>
       </div>
     </>
   );
-
   return (
     <Container>
       <div className={classes.toolbar} />

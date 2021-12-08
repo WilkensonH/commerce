@@ -26,45 +26,76 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
-@media (max-width: 780px) {
-  img {
-    width: 100%;
-    margin: 0;
-  }
-}
+
 img {
   width: 100%;
   margin: 0;
 }
-@media (max-width: 300px) {
-  .commerce {
-    display: none;
-  }
-}
+
 .l_in {
   display: flex;
 }
-.menu-logo {
-  text-align: center;
-  padding: 10px 0;
-}
 .divider {
   position: relative;
+}
+
+.profI-divider,
+.profII-divider {
+  display: none;
+}
+
+.prof-divider {
+  position: absolute;
+  top: 100px;
+  right: 100px;
+  width: 200px;
+}
+.display-grid {
+  margin: 0 auto;
+  padding: 25px;
+}
+.media-grid img {
+  margin: 10px 0;
+  width: 80%;
+}
+.content-container {
+  width: 300px;
+  margin: 0 10px 10px;
+}
+.btn-action {
+  display: flex;
+  width: 40%;
+  justify-content: space-between;
+  margin-right: auto;
+  padding-left: 150px;
+}
+
+.content-card {
+  animation: animate 2s ease-in;
+}
+@keyframes animate {
+  from {
+    top: 0px;
+  }
+  to {
+    top: 200px;
+  }
 }
 @media (max-width: 780px) {
   .divider img {
     height: 400px;
     width: 100%;
   }
-  .border {
-    width: 100%;
-  }
   .content-card {
     position: absolute;
     width: 200px;
     top: 210px;
-    color: #0964ee;
+    color: #0000ff;
     font-weight: bold;
+    transform: skewY(20deg);
+  }
+  .border {
+    width: 300px;
   }
 }
 @media (min-width: 780px) {
@@ -75,29 +106,36 @@ img {
     bottom: 0;
     color: #0964ee;
     font-weight: bold;
+    transform: skewY(20deg);
+  }
+  .border {
+    width: 300px;
   }
 }
-.prof-divider {
-  position: absolute;
-  top: 100px;
-  right: 100px;
-  width: 200px;
+@media (min-width: 780px) {
+  .profII-divider {
+    display: block;
+    position: absolute;
+    top: 250px;
+    right: 700px;
+    width: 200px;
+  }
+  .profI-divider {
+    display: block;
+    position: absolute;
+    top: 200px;
+    right: 400px;
+    width: 200px;
+  }
 }
-.border {
-  width: 210px;
+@media (max-width: 780px) {
+  img {
+    width: 100%;
+    margin: 0;
+  }
 }
-.display-grid {
-  margin: 0 auto;
-  padding: 10px;
+@media (max-width: 300px) {
+  .commerce {
+    display: none;
+  }
 }
-.media-grid img {
-  margin: 10px 0;
-  width: 80%;
-}
-.content-text{
-  width: 50%;
-}
-
- 
- 
- 

@@ -3,13 +3,12 @@ import {
   AppBar,
   Toolbar,
   IconButton,
-  Badge,
-  MenuItem,
-  Menu,
+  Badge,  
   Typography,
 } from "@material-ui/core";
 import { Link, useLocation } from "react-router-dom";
 import { ShoppingCart } from "@material-ui/icons";
+ 
 import useStyles from "./styles";
 
 const Navbar = ({ totalItems }) => {
@@ -53,7 +52,7 @@ const Navbar = ({ totalItems }) => {
               </IconButton>
             </div>
           )}
-        </Toolbar>
+        </Toolbar>        
       </AppBar>
     </>
   );
