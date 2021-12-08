@@ -15,19 +15,19 @@ import useStyles from "./styles";
 const About = () => {
   const classes = useStyles();
   return (
-    <main>      
+    <main>
       <div className="divider">
         <img src="asset/ezcom.png" alt="" />
         <div className="prof-divider">
-          <div className="border">             
+          <div className="border">
             <Grid className="display-grid">
-              <Card>                 
-                  <CardMedia
-                    component="img"
-                    alt="profile picture"
-                    height="500"
-                    image="asset/wilkpic.png"
-                  />             
+              <Card>
+                <CardMedia
+                  component="img"
+                  alt="profile picture"
+                  height="500"
+                  image="asset/wilkpic.png"
+                />
                 <CardContent className="content-card">
                   <Typography variant="body2" color="text.secondary">
                     Full Stack Web and Mobile Developer, Coding Bootcamp
@@ -41,10 +41,26 @@ const About = () => {
           </div>
         </div>
       </div>
-
-      <div className={classes.mainBg}>
-        <div className={classes.mainText}></div>
-      </div>
+      <Card>
+        <CardContent className="content-text">
+          <Typography variant="body2" color="text.secondary">
+            Full Stack Web and Mobile Developer, Coding Bootcamp Graduate and{" "}
+            <strong>Enrolled</strong> undergraduate Computer Science degree.
+            Love coding would like to have the opportunity to sharpened my
+            skills.
+          </Typography>
+        </CardContent>
+      </Card>
+      <Card>
+        <CardContent className="content-text">
+          <Typography variant="body2" color="text.secondary">
+            Full Stack Web and Mobile Developer, Coding Bootcamp Graduate and{" "}
+            <strong>Enrolled</strong> undergraduate Computer Science degree.
+            Love coding would like to have the opportunity to sharpened my
+            skills.
+          </Typography>
+        </CardContent>
+      </Card>
     </main>
   );
 };
