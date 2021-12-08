@@ -73,14 +73,7 @@ img {
 .content-card {
   animation: animate 2s ease-in-out 1s;
 }
-@keyframes animate {
-  from {
-    top: 0px;
-  }
-  to {
-    top: 300px;
-  }
-}
+
 @media (max-width: 780px) {
   .divider img {
     height: 400px;
@@ -97,6 +90,14 @@ img {
   .border {
     width: 300px;
   }
+  @keyframes animate {
+  from {
+    top: 0px;
+  }
+  to {
+    top: 210px;
+  }
+}
 }
 @media (min-width: 780px) {
   .content-card {
@@ -111,6 +112,14 @@ img {
   .border {
     width: 300px;
   }
+  @keyframes animate {
+  from {
+    top: 0px;
+  }
+  to {
+    top: 300px;
+  }
+}
 }
 @media (min-width: 780px) {
   .profII-divider {
