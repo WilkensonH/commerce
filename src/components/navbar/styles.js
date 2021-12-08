@@ -19,20 +19,7 @@ export default makeStyles((theme) => ({
       opacity: ".8",
     },
   },
-  logoContainer: {
-    border: "1px solid #fff",
-    borderRadius: "45%",
-    width: "110px",
-    height: "30px",
-    position: "relative",
-    background: "white",
-  },
-  logoText: {
-    borderRadius: "50%",
-    position: "absolute",
-    left: "8px",
-    top: "2px",
-  },
+ 
   logoHover: {
     color: "white",
     "&:hover": {

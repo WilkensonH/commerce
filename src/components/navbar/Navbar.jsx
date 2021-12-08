@@ -25,7 +25,7 @@ const Navbar = ({ totalItems }) => {
           <Typography component={Link} to="/about">
             <div className={classes.logoContainer}>
               <div className={classes.logoText}>
-                <span className={classes.logo}>EZCommerce</span>
+                <span className={classes.logo}>EZComm</span>
               </div>
             </div>
           </Typography>
