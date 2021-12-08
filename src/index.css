@@ -71,14 +71,14 @@ img {
 }
 
 .content-card {
-  animation: animate 2s ease-in;
+  animation: animate 2s ease-in-out 0s;
 }
 @keyframes animate {
   from {
     top: 0px;
   }
   to {
-    top: 200px;
+    top: 300px;
   }
 }
 @media (max-width: 780px) {
