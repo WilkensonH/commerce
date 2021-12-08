@@ -29,7 +29,7 @@ code {
 @media (max-width: 780px) {
   img {
     width: 300px;
-    margin: 10px;
+    margin: 10px;     
   }
 }
 @media (max-width: 300px) {
