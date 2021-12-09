@@ -20,7 +20,7 @@ const About = () => {
                   component="img"
                   alt="profile picture"
                   height="500"
-                  image="asset/wilkpic.png"
+                  image="asset/com.jpg"
                 />
                 <CardContent className="content-card">
                   <Typography variant="body2" color="text.secondary">
@@ -42,7 +42,7 @@ const About = () => {
                   component="img"
                   alt="profile picture"
                   height="500"
-                  image="asset/wilkpic.png"
+                  image="asset/web.jpg"
                 />
                 <CardContent className="content-card">
                   <Typography variant="body2" color="text.secondary">
@@ -64,7 +64,7 @@ const About = () => {
                   component="img"
                   alt="profile picture"
                   height="500"
-                  image="asset/wilkpic.png"
+                  image="asset/multicom.jpg"
                 />
                 <CardContent className="content-card">
                   <Typography variant="body2" color="text.secondary">
