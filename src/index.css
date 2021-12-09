@@ -31,9 +31,12 @@ img {
   width: 100%;
   margin: 0;
 }
-.checkout-btn {
+.checkout-total {
   display: block;
   margin: 50px 25%;
+}
+.checkout-btn {
+  display: flex;
 }
 
 .l_in {
@@ -71,6 +74,11 @@ img {
   background: #710147c5;
 }
 
+@media (min-width: 300px) {
+  .checkout-btn {
+    display: block;
+  }
+}
 @media (max-width: 780px) {
   .divider img {
     height: 400px;

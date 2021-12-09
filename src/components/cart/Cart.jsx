@@ -38,13 +38,13 @@ const Cart = ({
           </Grid>
         ))}
       </Grid>
-      <div className="checkout-btn">
+      <div className="checkout-total">
         <div xs={12} md={6}>
           <Typography variant="h4">
-            Subtotal: {cart.subtotal.formatted_with_symbol}
+            Subtotal:&nbsp;{cart.subtotal.formatted_with_symbol}
           </Typography>
         </div>
-        <div xs={12} md={6}>
+        <div className="checkout-btn">
           <Button
             className={classes.checkoutButton}
             component={Link}
