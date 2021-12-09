@@ -70,13 +70,8 @@ img {
   padding-left: 150px;
 }
 .content-card {
-  background: #710147C5;
+  background: #710147c5;
 }
-
-.content-card {
-  animation: animate 2s ease-in-out 1s;
-}
-
 @media (max-width: 780px) {
   .divider img {
     height: 400px;
@@ -93,14 +88,6 @@ img {
   .border {
     width: 300px;
   }
-  @keyframes animate {
-  from {
-    top: 0px;
-  }
-  to {
-    top: 210px;
-  }
-}
 }
 @media (min-width: 780px) {
   .content-card {
@@ -110,19 +97,20 @@ img {
     bottom: 0;
     color: #fff;
     font-weight: bold;
-    transform: skewY(20deg);  }
-  
+    transform: skewY(20deg);
+  }
+
   .border {
     width: 300px;
   }
   @keyframes animate {
-  from {
-    top: 0px;
+    from {
+      top: 0px;
+    }
+    to {
+      top: 300px;
+    }
   }
-  to {
-    top: 300px;
-  }
-}
 }
 @media (min-width: 780px) {
   .profII-divider {
