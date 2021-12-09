@@ -25,13 +25,12 @@ export default makeStyles((theme) => ({
     textDecoration: "none",
   },
   cardDetails: {
-    display: "flex",    
-    padding:'1%',
+    display: "flex",
+    padding: "1%",
     margin: "100px 0 ",
     width: "100%",
     justifyContent: "space-between",
-    wrap:'wrap'
-     
+    wrap: "wrap",
   },
   //CartItem
   media: {
@@ -50,7 +49,7 @@ export default makeStyles((theme) => ({
     display: "inline-flex",
     color: "blue",
     marginTop: "1%",
-    marginRight: "15px",    
+    marginRight: "15px",
   },
   subtotal: {
     float: "right",
@@ -65,7 +64,7 @@ export default makeStyles((theme) => ({
   },
   buttons: {
     display: "flex",
-    alignItems: "center",
+    alignItems: "center",    
   },
 }));
 

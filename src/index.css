@@ -68,7 +68,7 @@ img {
   justify-content: space-between;
   margin-right: auto;
   padding-left: 150px;
-}
+} 
 .content-card {
   background: #710147c5;
 }
@@ -102,15 +102,7 @@ img {
 
   .border {
     width: 300px;
-  }
-  @keyframes animate {
-    from {
-      top: 0px;
-    }
-    to {
-      top: 300px;
-    }
-  }
+  } 
 }
 @media (min-width: 780px) {
   .profII-divider {
