@@ -86,7 +86,7 @@ img {
     position: absolute;
     width: 200px;
     top: 210px;
-    color: #000;
+    color: #fff;
     font-weight: bold;
     transform: skewY(20deg);
   }
@@ -108,7 +108,7 @@ img {
     width: 200px;
     top: 300px;
     bottom: 0;
-    color: #000;
+    color: #fff;
     font-weight: bold;
     transform: skewY(20deg);  }
   
