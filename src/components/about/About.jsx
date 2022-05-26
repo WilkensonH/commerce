@@ -7,6 +7,10 @@ import {
   Typography,
 } from "@material-ui/core";
 
+import { AboutContent } from "../index";
+import { GoalContent } from "../index";
+import { SkillContent } from "../index";
+
 const About = () => {
   return (
     <main>
@@ -24,10 +28,7 @@ const About = () => {
                 />
                 <CardContent className="content-card">
                   <Typography variant="body2" color="text.secondary">
-                    Full Stack Web and Mobile Developer, Coding Bootcamp
-                    Graduate and <strong>Enrolled</strong> undergraduate
-                    Computer Science degree. Love coding would like to have the
-                    opportunity to sharpened my skills.
+                    <AboutContent />
                   </Typography>
                 </CardContent>
               </Card>
@@ -46,10 +47,7 @@ const About = () => {
                 />
                 <CardContent className="content-card">
                   <Typography variant="body2" color="text.secondary">
-                    Full Stack Web and Mobile Developer, Coding Bootcamp
-                    Graduate and <strong>Enrolled</strong> undergraduate
-                    Computer Science degree. Love coding would like to have the
-                    opportunity to sharpened my skills.
+                    <GoalContent />
                   </Typography>
                 </CardContent>
               </Card>
@@ -68,16 +66,13 @@ const About = () => {
                 />
                 <CardContent className="content-card">
                   <Typography variant="body2" color="text.secondary">
-                    Full Stack Web and Mobile Developer, Coding Bootcamp
-                    Graduate and <strong>Enrolled</strong> undergraduate
-                    Computer Science degree. Love coding would like to have the
-                    opportunity to sharpened my skills.
+                    <SkillContent />
                   </Typography>
                 </CardContent>
               </Card>
             </Grid>
           </div>
-        </div>    
+        </div>
       </div>
     </main>
   );
