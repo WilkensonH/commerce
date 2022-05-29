@@ -1,4 +1,5 @@
- [wilkensoncode logo]()
+ <img src="https://github.com/wilkensoncode/commerce/blob/365a8734f4e6a8c6ae4fb7d683f81ab0d74df497/Wilkensonkode.png" width="100" aligns="center"/>
+ 
 ### ecommerce store | responsive 
 #### Front-end development 
   able to add an item to the shopping cart and procede to checkout 
