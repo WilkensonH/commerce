@@ -1,3 +1,4 @@
+ [wilkensoncode logo]()
 ### ecommerce store | responsive 
 #### Front-end development 
   able to add an item to the shopping cart and procede to checkout 
@@ -24,5 +25,5 @@
   
   
   
-![project2](https://user-images.githubusercontent.com/76856697/143625176-99a54940-af47-4aee-b5a1-4b563cfbb025.png)
+![ecommerce store](https://user-images.githubusercontent.com/76856697/143625176-99a54940-af47-4aee-b5a1-4b563cfbb025.png)
  
