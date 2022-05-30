@@ -15,7 +15,7 @@
   
   Stripejs integration to process payment
   
-  
+  Navigate repo to see codes by going to the src folder then component ...
   
  
  
