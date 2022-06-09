@@ -1,4 +1,4 @@
- <img src="https://github.com/wilkensoncode/commerce/blob/365a8734f4e6a8c6ae4fb7d683f81ab0d74df497/Wilkensonkode.png" width="100" aligns="center"/>
+ <img src="https://github.com/wilkensoncode/commerce/blob/365a8734f4e6a8c6ae4fb7d683f81ab0d74df497/Wilkensonkode.png" width="100" alt="logo" height="100" aligns="center"/>
  
  👁 See live : https://ezcomm.netlify.app/
  
