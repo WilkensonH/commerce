@@ -1,11 +1,4 @@
 import React from "react";
-import {
-  Card,
-  CardContent,
-  CardMedia,
-  Grid,
-  Typography,
-} from "@material-ui/core";
 
 const About = () => {
   return (
